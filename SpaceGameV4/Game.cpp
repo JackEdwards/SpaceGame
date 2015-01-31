@@ -6,13 +6,12 @@ int Game::windowHeight = 640;
 
 Game::Game() :
     window(sf::VideoMode(windowWidth, windowHeight), "Spaaaaaaace!", sf::Style::Close),
-    asteroids(5)
+    asteroids(5),
+    startText("Press enter to begin, or Q to quit.", font),
+    deathText("You died!\nPress enter to R to the start menu.", font)
 {
     srand(time(NULL));
-    /*font.loadFromFile(resourcePath() + "sansation.ttf");
-    sf::Text text("Press enter to begin!", font);
-    text.setColor(sf::Color::Blue);
-    text.setPosition(50, 50);*/
+    font.loadFromFile(resourcePath() + "sansation.ttf");
     startGame();
 }
 
@@ -56,11 +55,11 @@ void Game::update()
 
 void Game::render()
 {
-    window.clear(sf::Color::White);
+    window.clear();
     
     switch (gameState) {
         case StartScreen: {
-            //window.draw(text);
+            window.draw(startText);
             
             break;
         }
@@ -73,6 +72,7 @@ void Game::render()
             break;
         }
         case DeathScreen: {
+            window.draw(deathText);
             
             break;
         }

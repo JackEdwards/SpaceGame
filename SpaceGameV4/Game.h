@@ -37,8 +37,9 @@ private:
     sf::RenderWindow window;
     GameState gameState;
     sf::Clock clock;
-    //sf::Font font;
-    //sf::Text text;
+    sf::Font font;
+    sf::Text startText;
+    sf::Text deathText;
     Player player;
     std::vector<Asteroid> asteroids;
     Background background;

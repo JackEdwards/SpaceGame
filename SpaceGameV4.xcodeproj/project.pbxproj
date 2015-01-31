@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041A33F81A7D04AA002D9426 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 041A33F71A7D04AA002D9426 /* sansation.ttf */; };
 		04D2A9E01A7C948F0057C21D /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A9DF1A7C948F0057C21D /* ResourcePath.mm */; };
 		04D2AA181A7C96620057C21D /* asteroid-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA121A7C96620057C21D /* asteroid-large.png */; };
 		04D2AA191A7C96620057C21D /* asteroid-med.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA131A7C96620057C21D /* asteroid-med.png */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041A33F71A7D04AA002D9426 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		04D2A9DA1A7C948F0057C21D /* SpaceGameV4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceGameV4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D2A9DE1A7C948F0057C21D /* SpaceGameV4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceGameV4-Info.plist"; sourceTree = "<group>"; };
 		04D2A9DF1A7C948F0057C21D /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		04D2A9E41A7C948F0057C21D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				041A33F71A7D04AA002D9426 /* sansation.ttf */,
 				04D2AA121A7C96620057C21D /* asteroid-large.png */,
 				04D2AA131A7C96620057C21D /* asteroid-med.png */,
 				04D2AA141A7C96620057C21D /* asteroid-small.png */,
@@ -119,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				04D2AA211A7C96720057C21D /* Main.cpp */,
-				04D2AA221A7C96720057C21D /* Player.cpp */,
 				04D2AA201A7C96720057C21D /* Game.cpp */,
+				04D2AA221A7C96720057C21D /* Player.cpp */,
 				04D2AA1E1A7C96720057C21D /* Asteroid.cpp */,
 				04D2AA1F1A7C96720057C21D /* Background.cpp */,
 			);
@@ -186,6 +189,7 @@
 			files = (
 				04D2AA181A7C96620057C21D /* asteroid-large.png in Resources */,
 				04D2AA1B1A7C96620057C21D /* background.png in Resources */,
+				041A33F81A7D04AA002D9426 /* sansation.ttf in Resources */,
 				04D2AA191A7C96620057C21D /* asteroid-med.png in Resources */,
 				04D2AA1A1A7C96620057C21D /* asteroid-small.png in Resources */,
 				04D2AA1C1A7C96620057C21D /* death.png in Resources */,
