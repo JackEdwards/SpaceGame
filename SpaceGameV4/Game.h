@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <SFML/Graphics.hpp>
+#include <SFMl/Audio.hpp>
 #include "ResourcePath.hpp"
 #include <vector>
 #include "Player.h"
@@ -20,6 +21,7 @@ private:
     void handleInput(float &deltaTime);
     void moveAsteroids(float &deltaTime);
     void handleCollision();
+    void handleAnimations();
     bool asteroidHasPassed(Asteroid &asteroid);
     bool playerCanMoveLeft();
     bool playerCanMoveRight();
@@ -40,9 +42,12 @@ private:
     sf::Font font;
     sf::Text startText;
     sf::Text deathText;
+    sf::SoundBuffer soundBuffer;
+    sf::Sound deathSound;
     Player player;
     std::vector<Asteroid> asteroids;
     Background background;
+    int currentFrame;
 };
 
 #endif

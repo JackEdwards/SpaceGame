@@ -12,6 +12,9 @@ Game::Game() :
 {
     srand(time(NULL));
     font.loadFromFile(resourcePath() + "sansation.ttf");
+    soundBuffer.loadFromFile(resourcePath() + "death.wav");
+    deathSound.setBuffer(soundBuffer);
+    currentFrame = 0;
     startGame();
 }
 
@@ -41,6 +44,7 @@ void Game::update()
             handleInput(deltaTime);
             moveAsteroids(deltaTime);
             handleCollision();
+            handleAnimations();
             
             break;
         }
@@ -117,8 +121,20 @@ void Game::moveAsteroids(float &deltaTime)
 void Game::handleCollision()
 {
     for (Asteroid asteroid : asteroids)
-        if (player.getSprite().getGlobalBounds().intersects(asteroid.getSprite().getGlobalBounds()))
+        if (player.getSprite().getGlobalBounds().intersects(asteroid.getSprite().getGlobalBounds())) {
+            deathSound.play();
             gameState = DeathScreen;
+        }
+}
+
+void Game::handleAnimations()
+{
+    if (currentFrame < 2)
+        currentFrame++;
+    else
+        currentFrame = 0;
+    
+    player.getSprite().setTexture(player.getShipTextures()[currentFrame]);
 }
 
 bool Game::asteroidHasPassed(Asteroid &asteroid)

@@ -2,10 +2,12 @@
 
 sf::Vector2u Player::spriteSize = sf::Vector2u(64, 64);
 
-Player::Player()
+Player::Player() : shipTextures(3)
 {
-    texture.loadFromFile(resourcePath() + "ship.png", sf::IntRect(0, 0, 64, 64));
-    sprite.setTexture(texture);
+    for (int i = 0; i < shipTextures.size(); ++i)
+        shipTextures[i].loadFromFile(resourcePath() + "ship.png", sf::IntRect(i * 64, 0, 64, 64));
+    
+    sprite.setTexture(shipTextures[0]);
     speed = 600.0f;
 }
 
@@ -22,4 +24,9 @@ float& Player::getSpeed()
 sf::Vector2u Player::getSpriteSize()
 {
     return spriteSize;
+}
+
+std::vector<sf::Texture>& Player::getShipTextures()
+{
+    return shipTextures;
 }
