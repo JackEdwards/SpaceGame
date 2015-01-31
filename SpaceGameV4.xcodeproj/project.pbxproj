@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		04D2A9E01A7C948F0057C21D /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A9DF1A7C948F0057C21D /* ResourcePath.mm */; };
+		04D2AA181A7C96620057C21D /* asteroid-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA121A7C96620057C21D /* asteroid-large.png */; };
+		04D2AA191A7C96620057C21D /* asteroid-med.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA131A7C96620057C21D /* asteroid-med.png */; };
+		04D2AA1A1A7C96620057C21D /* asteroid-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA141A7C96620057C21D /* asteroid-small.png */; };
+		04D2AA1B1A7C96620057C21D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA151A7C96620057C21D /* background.png */; };
+		04D2AA1C1A7C96620057C21D /* death.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA161A7C96620057C21D /* death.png */; };
+		04D2AA1D1A7C96620057C21D /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D2AA171A7C96620057C21D /* ship.png */; };
+		04D2AA231A7C96720057C21D /* Asteroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D2AA1E1A7C96720057C21D /* Asteroid.cpp */; };
+		04D2AA241A7C96720057C21D /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D2AA1F1A7C96720057C21D /* Background.cpp */; };
+		04D2AA251A7C96720057C21D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D2AA201A7C96720057C21D /* Game.cpp */; };
+		04D2AA261A7C96720057C21D /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D2AA211A7C96720057C21D /* Main.cpp */; };
+		04D2AA271A7C96720057C21D /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04D2AA221A7C96720057C21D /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -15,6 +26,21 @@
 		04D2A9DE1A7C948F0057C21D /* SpaceGameV4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceGameV4-Info.plist"; sourceTree = "<group>"; };
 		04D2A9DF1A7C948F0057C21D /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		04D2A9E11A7C948F0057C21D /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		04D2AA121A7C96620057C21D /* asteroid-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-large.png"; sourceTree = "<group>"; };
+		04D2AA131A7C96620057C21D /* asteroid-med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-med.png"; sourceTree = "<group>"; };
+		04D2AA141A7C96620057C21D /* asteroid-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-small.png"; sourceTree = "<group>"; };
+		04D2AA151A7C96620057C21D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		04D2AA161A7C96620057C21D /* death.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = death.png; sourceTree = "<group>"; };
+		04D2AA171A7C96620057C21D /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
+		04D2AA1E1A7C96720057C21D /* Asteroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Asteroid.cpp; sourceTree = "<group>"; };
+		04D2AA1F1A7C96720057C21D /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
+		04D2AA201A7C96720057C21D /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		04D2AA211A7C96720057C21D /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		04D2AA221A7C96720057C21D /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		04D2AA281A7C967E0057C21D /* Asteroid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Asteroid.h; sourceTree = "<group>"; };
+		04D2AA291A7C967E0057C21D /* Background.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		04D2AA2A1A7C967E0057C21D /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		04D2AA2B1A7C967E0057C21D /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +73,8 @@
 		04D2A9DC1A7C948F0057C21D /* SpaceGameV4 */ = {
 			isa = PBXGroup;
 			children = (
+				04D2AA111A7C964D0057C21D /* C++ Files */,
+				04D2AA101A7C96480057C21D /* Header Files */,
 				04D2A9DF1A7C948F0057C21D /* ResourcePath.mm */,
 				04D2A9E11A7C948F0057C21D /* ResourcePath.hpp */,
 				04D2A9E41A7C948F0057C21D /* Resources */,
@@ -66,8 +94,37 @@
 		04D2A9E41A7C948F0057C21D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04D2AA121A7C96620057C21D /* asteroid-large.png */,
+				04D2AA131A7C96620057C21D /* asteroid-med.png */,
+				04D2AA141A7C96620057C21D /* asteroid-small.png */,
+				04D2AA151A7C96620057C21D /* background.png */,
+				04D2AA161A7C96620057C21D /* death.png */,
+				04D2AA171A7C96620057C21D /* ship.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		04D2AA101A7C96480057C21D /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				04D2AA2A1A7C967E0057C21D /* Game.h */,
+				04D2AA2B1A7C967E0057C21D /* Player.h */,
+				04D2AA281A7C967E0057C21D /* Asteroid.h */,
+				04D2AA291A7C967E0057C21D /* Background.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		04D2AA111A7C964D0057C21D /* C++ Files */ = {
+			isa = PBXGroup;
+			children = (
+				04D2AA211A7C96720057C21D /* Main.cpp */,
+				04D2AA221A7C96720057C21D /* Player.cpp */,
+				04D2AA201A7C96720057C21D /* Game.cpp */,
+				04D2AA1E1A7C96720057C21D /* Asteroid.cpp */,
+				04D2AA1F1A7C96720057C21D /* Background.cpp */,
+			);
+			name = "C++ Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +184,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D2AA181A7C96620057C21D /* asteroid-large.png in Resources */,
+				04D2AA1B1A7C96620057C21D /* background.png in Resources */,
+				04D2AA191A7C96620057C21D /* asteroid-med.png in Resources */,
+				04D2AA1A1A7C96620057C21D /* asteroid-small.png in Resources */,
+				04D2AA1C1A7C96620057C21D /* death.png in Resources */,
+				04D2AA1D1A7C96620057C21D /* ship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +216,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D2AA241A7C96720057C21D /* Background.cpp in Sources */,
+				04D2AA231A7C96720057C21D /* Asteroid.cpp in Sources */,
+				04D2AA271A7C96720057C21D /* Player.cpp in Sources */,
 				04D2A9E01A7C948F0057C21D /* ResourcePath.mm in Sources */,
+				04D2AA251A7C96720057C21D /* Game.cpp in Sources */,
+				04D2AA261A7C96720057C21D /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +359,7 @@
 				04D2A9F11A7C948F0057C21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
