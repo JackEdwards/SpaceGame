@@ -8,13 +8,16 @@ Game::Game() :
     window(sf::VideoMode(windowWidth, windowHeight), "Spaaaaaaace!", sf::Style::Close),
     asteroids(5),
     startText("Press enter to begin, or Q to quit.", font),
-    deathText("You died!\nPress enter to R to the start menu.", font)
+    deathText("You died!\nYou lasted 0 seconds.\nPress R to return to the start menu.", font)
 {
     srand(time(NULL));
     font.loadFromFile(resourcePath() + "sansation.ttf");
     soundBuffer.loadFromFile(resourcePath() + "death.wav");
     deathSound.setBuffer(soundBuffer);
-    currentFrame = 0;
+    startText.setOrigin(startText.getGlobalBounds().width / 2, startText.getGlobalBounds().height / 2);
+    deathText.setOrigin(deathText.getGlobalBounds().width / 2, deathText.getGlobalBounds().height / 2);
+    startText.setPosition(windowWidth / 2, windowHeight / 2);
+    deathText.setPosition(windowWidth / 2, windowHeight / 2);
     startGame();
 }
 
@@ -29,7 +32,8 @@ void Game::run()
 void Game::update()
 {
     handleEvents();
-    float deltaTime = clock.restart().asSeconds();
+    float deltaTime = deltaClock.restart().asSeconds();
+    Asteroid::getSpeed() = 300.0f + (gameClock.getElapsedTime().asSeconds() * 20);
     
     switch (gameState) {
         case StartScreen: {
@@ -44,7 +48,7 @@ void Game::update()
             handleInput(deltaTime);
             moveAsteroids(deltaTime);
             handleCollision();
-            handleAnimations();
+            handleShipAnimation();
             
             break;
         }
@@ -122,19 +126,23 @@ void Game::handleCollision()
 {
     for (Asteroid asteroid : asteroids)
         if (player.getSprite().getGlobalBounds().intersects(asteroid.getSprite().getGlobalBounds())) {
+            playTime = gameClock.getElapsedTime();
+            deathText.setString("You died!\nYou lasted " + std::to_string(playTime.asSeconds()) + " seconds.\nPress R to return to the start menu.");
             deathSound.play();
+            Asteroid::getSpeed() = 300.0f;
+            gameClock.restart();
             gameState = DeathScreen;
         }
 }
 
-void Game::handleAnimations()
+void Game::handleShipAnimation()
 {
-    if (currentFrame < 2)
-        currentFrame++;
+    if (player.getCurrentFrame() < 2)
+        ++player.getCurrentFrame();
     else
-        currentFrame = 0;
+        player.getCurrentFrame() = 0;
     
-    player.getSprite().setTexture(player.getShipTextures()[currentFrame]);
+    player.getSprite().setTexture(player.getShipTextures()[player.getCurrentFrame()]);
 }
 
 bool Game::asteroidHasPassed(Asteroid &asteroid)

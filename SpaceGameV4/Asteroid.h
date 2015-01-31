@@ -9,12 +9,12 @@ class Asteroid
 public:
     Asteroid();
     sf::Sprite& getSprite();
-    float& getSpeed();
+    static float& getSpeed();
     static sf::Vector2u getSpriteSize();
 private:
     sf::Texture texture;
     sf::Sprite sprite;
-    float speed;
+    static float speed;
     static sf::Vector2u spriteSize;
 };
 

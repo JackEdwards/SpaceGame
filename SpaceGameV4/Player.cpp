@@ -9,6 +9,7 @@ Player::Player() : shipTextures(3)
     
     sprite.setTexture(shipTextures[0]);
     speed = 600.0f;
+    currentFrame = 0;
 }
 
 sf::Sprite& Player::getSprite()
@@ -29,4 +30,9 @@ sf::Vector2u Player::getSpriteSize()
 std::vector<sf::Texture>& Player::getShipTextures()
 {
     return shipTextures;
+}
+
+int& Player::getCurrentFrame()
+{
+    return currentFrame;
 }

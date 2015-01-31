@@ -1,12 +1,12 @@
 #include "Asteroid.h"
 
 sf::Vector2u Asteroid::spriteSize = sf::Vector2u(64, 64);
+float Asteroid::speed = 300.0f;
 
 Asteroid::Asteroid()
 {
     texture.loadFromFile(resourcePath() + "asteroid-med.png");
     sprite.setTexture(texture);
-    speed = 500.0f;
 }
 
 sf::Sprite& Asteroid::getSprite()

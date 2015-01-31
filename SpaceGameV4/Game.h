@@ -21,7 +21,8 @@ private:
     void handleInput(float &deltaTime);
     void moveAsteroids(float &deltaTime);
     void handleCollision();
-    void handleAnimations();
+    void handleShipAnimation();
+    bool handleDeathAnimation();
     bool asteroidHasPassed(Asteroid &asteroid);
     bool playerCanMoveLeft();
     bool playerCanMoveRight();
@@ -38,7 +39,9 @@ private:
     static int windowHeight;
     sf::RenderWindow window;
     GameState gameState;
-    sf::Clock clock;
+    sf::Clock deltaClock;
+    sf::Clock gameClock;
+    sf::Time playTime;
     sf::Font font;
     sf::Text startText;
     sf::Text deathText;
@@ -47,7 +50,6 @@ private:
     Player player;
     std::vector<Asteroid> asteroids;
     Background background;
-    int currentFrame;
 };
 
 #endif

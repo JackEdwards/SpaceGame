@@ -13,9 +13,12 @@ public:
     float& getSpeed();
     static sf::Vector2u getSpriteSize();
     std::vector<sf::Texture>& getShipTextures();
+    int& getCurrentFrame();
     
 private:
+    
     std::vector<sf::Texture> shipTextures;
+    int currentFrame;
     sf::Sprite sprite;
     float speed;
     static sf::Vector2u spriteSize;
